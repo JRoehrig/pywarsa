@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34f7f1da-1a3f-48e1-82a7-93c11e7cb92d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/warsa/drought/indices/spi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/warsa/watershed/hydrograph.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/33_lassification_with_feed_forward_neural_networks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/cmorph.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/normality_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/arcgis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/LoadTimeSeries_ANN1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/ann test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/hydrograph.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/precipitation/precipitation_time_series.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/21_building_a_network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/gpm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/timeseries_old1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/gdal/gdal_merge.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/projection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/clima/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/timeseriesio.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/ann.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/analysis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/rfe2_africa.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/20_building_a_data_set.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/centroid_timeseries.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/324_using_recurrent_networks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/cfrs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/vector/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/layers.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/gdal/rasterstats/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/gdal/rasterstats/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/auth.rda.ucar.edu" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/resample.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/LoadTimeSeries_ANN2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/321_feed_forward_networks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/basin_analysis_old.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/zonal.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/math_op.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/clip.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/examples/23_training_your_network_on_your_dataset.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/evapotranspiration/et0_timeseries.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/srtm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/raster_analysis/rasterize.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/trmm_old.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/vector/thiessen.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/old/arc2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/simple_linear_regression.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/linear_regression.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/record.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/timeseries_old.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/data/hydroclim/observed/dwd/cdc/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/timeseriesio_old.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/evapotranspiration/test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrology/ann/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/multiple_linear_regression.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/drought/spi_drought_index.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/vector/thiessen_weights.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/gdal/rasterstats/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/clima/solar_radiation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/drought/spi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/gis/gdal/rasterstats/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/sarp/rfe_south_asia.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/warsa/timeseries/ts.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/__init__.py" afterPath="$PROJECT_DIR$/warsa/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/precipitation/__init__.py" afterPath="$PROJECT_DIR$/warsa/precipitation/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/warsa/hydrology/basin_analysis.py" afterPath="$PROJECT_DIR$/warsa/watershed/basin_analysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/evapotranspiration/penman_monteith.py" afterPath="$PROJECT_DIR$/warsa/evapotranspiration/penman_monteith.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/hydrostatistics/__init__.py" afterPath="$PROJECT_DIR$/warsa/hydrostatistics/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/warsa/hydrology/ratingcurves.py" afterPath="$PROJECT_DIR$/warsa/watershed/ratingcurves.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/warsa/hydrogeology/__init__.py" afterPath="$PROJECT_DIR$/warsa/watershed/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/warsa/hydrology/basin.py" afterPath="$PROJECT_DIR$/warsa/watershed/basin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/utils/osu.py" afterPath="$PROJECT_DIR$/warsa/utils/osu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warsa/timeseries/timeseries.py" afterPath="$PROJECT_DIR$/warsa/timeseries/timeseries.py" />
+    </list>
+    <ignored path="pywarsa.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/pywarsa$precipitation_download__1_.coverage" NAME="precipitation_download (1) Coverage Results" MODIFIED="1466685759016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Pampanga" />
+    <SUITE FILE_PATH="coverage/pywarsa$raster.coverage" NAME="raster Coverage Results" MODIFIED="1466689022479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warsa/gis/rasters" />
+    <SUITE FILE_PATH="coverage/pywarsa$flow_direction_pyx.coverage" NAME="flow_direction.pyx Coverage Results" MODIFIED="1463745186677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warsa/wcython" />
+    <SUITE FILE_PATH="coverage/pywarsa$flowdir.coverage" NAME="flowdir Coverage Results" MODIFIED="1467052201907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warsa/gis/rasters" />
+    <SUITE FILE_PATH="coverage/pywarsa$Unittests_in_setup.coverage" NAME="Unittests in setup Coverage Results" MODIFIED="1463749959708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warsa/wcython" />
+    <SUITE FILE_PATH="coverage/pywarsa$precipitation_rasterize.coverage" NAME="precipitation_rasterize Coverage Results" MODIFIED="1466689065839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Pampanga" />
+    <SUITE FILE_PATH="coverage/pywarsa$precipitation_download.coverage" NAME="precipitation_download Coverage Results" MODIFIED="1464017640563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../pywarsasandbox/warsasb/sarp" />
+    <SUITE FILE_PATH="coverage/pywarsa$ann.coverage" NAME="ann Coverage Results" MODIFIED="1440747248336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../pylimpopo/limpopo/mozambique/ddm" />
+    <SUITE FILE_PATH="coverage/pywarsa$nc.coverage" NAME="nc Coverage Results" MODIFIED="1463667550533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../lorza/timeseries" />
+    <SUITE FILE_PATH="coverage/pywarsa$precipitation_from_sarp.coverage" NAME="precipitation_from_sarp Coverage Results" MODIFIED="1440669983773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../pylimpopo/limpopo/mozambique/timeseries" />
+    <SUITE FILE_PATH="coverage/pywarsa$watershed_delineation.coverage" NAME="watershed_delineation Coverage Results" MODIFIED="1464016795228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/warsa/gis/rasters" />
+    <SUITE FILE_PATH="coverage/pywarsa$dwaf.coverage" NAME="dwaf Coverage Results" MODIFIED="1440680292102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../pylimpopo/limpopo/south_africa" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pywarsa" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="time_series.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/time_series.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rasterize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/rasterize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="243" column="48" lean-forward="false" selection-start-line="243" selection-start-column="48" selection-end-line="243" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monthly.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/timeseries/monthly.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="penman_monteith.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/warsa/evapotranspiration/penman_monteith.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yearly.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/timeseries/yearly.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yearly.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/yearly.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timestamp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/timeseries/timestamp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GIRS/girs/feat/layers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/download.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2771">
+              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rasterize.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/rasterize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>timeseries_old</find>
+      <find>thies</find>
+      <find>thiess</find>
+      <find>thiesse</find>
+      <find>t</find>
+      <find>th</find>
+      <find>thie</find>
+      <find>timeseriesio</find>
+      <find>thiessen_weights</find>
+      <find>thiessen</find>
+      <find>u</find>
+      <find>ut</find>
+      <find>utf8</find>
+      <find>utf</find>
+      <find>rasterize_folder</find>
+      <find>relativedelta</find>
+      <find>relatived</find>
+      <find>resampl</find>
+      <find>default: a</find>
+      <find>df1</find>
+      <find>self.code</find>
+      <find>chirp</find>
+      <find>cmorp</find>
+      <find>\</find>
+      <find>set_time</find>
+      <find>month</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>timeseries</replace>
+      <replace>A</replace>
+      <replace>/</replace>
+      <replace>year</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\sciebo\PythonProjects\GIRS</dir>
+      <dir>D:\sciebo\PythonProjects\pywarsa</dir>
+      <dir>D:\sciebo\PythonProjects\pywarsa\warsa\precipitation</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../pywarsadev/tests/timeseries/test_monthly.py" />
+        <option value="$PROJECT_DIR$/warsa/timeseries/month.py" />
+        <option value="$PROJECT_DIR$/warsa/timeseries/timeseries.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/drought/indices/spei_test.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/drought/indices/spi_test.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/drought/indices.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/timeseries.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/monthly.py" />
+        <option value="$PROJECT_DIR$/warsa/hydrostatistics/moments.py" />
+        <option value="$PROJECT_DIR$/warsa/drought/indices.py" />
+        <option value="$PROJECT_DIR$/../lorza/drought/irland/spei.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/myscript.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/read_dataframe.py" />
+        <option value="$PROJECT_DIR$/../precipytation/test/test_spp.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/morning trial.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/reading_folders.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/time_examples.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/concatenate_dataframe.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/download_v0x_8km_30min.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/cmorph_rasterize.py" />
+        <option value="$PROJECT_DIR$/../precipytation/precipitation/satellite/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/cmorph_download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/gpm/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/trmm/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/rfe/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/arc2/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/download.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/precipitation/satellite/download.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/chirps/download.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/precipitation/satellite/rasterize.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/functions_parameters_examples.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/mubuku/raifall.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/mubuku/rainfall.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/precipitation_sahra.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/gap_analysis.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/arc2/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/rfe/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/chirps/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/gpm/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/trmm/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/rasterize.py" />
+        <option value="$PROJECT_DIR$/warsa/precipitation/satellite/time_series.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/gdalcheck.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/pybasics1.py" />
+        <option value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/pybasics2.py" />
+        <option value="$PROJECT_DIR$/warsa/timeseries/timestamp.py" />
+        <option value="$PROJECT_DIR$/warsa/timeseries/monthly.py" />
+        <option value="$PROJECT_DIR$/warsa/timeseries/yearly.py" />
+        <option value="$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/yearly.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsa" type="462c0819:PsiDirectoryNode" />
+              <item name="warsa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsa" type="462c0819:PsiDirectoryNode" />
+              <item name="warsa" type="462c0819:PsiDirectoryNode" />
+              <item name="evapotranspiration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsa" type="462c0819:PsiDirectoryNode" />
+              <item name="warsa" type="462c0819:PsiDirectoryNode" />
+              <item name="timeseries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsadev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsadev" type="462c0819:PsiDirectoryNode" />
+              <item name="warsadev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pywarsa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pywarsadev" type="462c0819:PsiDirectoryNode" />
+              <item name="warsadev" type="462c0819:PsiDirectoryNode" />
+              <item name="timeseries" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/warsa/precipytation/satellite/cmorph/cmorph_rasterize.py" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/../precipytation/precipytation/reanalysis" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\sciebo\InternshipHydrology\pydrology\pydrology" />
+      <recent name="D:\sciebo\InternshipHydrology\pydrology\timeseries" />
+      <recent name="D:\sciebo\PythonProjects\pywarsa\warsa" />
+      <recent name="D:\Projects\python_pycharm_workspace\pywarsa\warsa\data\hydroclim\satellite\chirps" />
+      <recent name="D:\Projects\python_pycharm_workspace\pyBeginningStatistics\chp02" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\sciebo\InternshipHydrology\pydrology\pydrology" />
+      <recent name="D:\sciebo\PythonProjects\precipytation\precipitation\satellite" />
+      <recent name="D:\sciebo\PythonProjects\pywarsa\warsa\precipitation\satellite" />
+      <recent name="D:\sciebo\PythonProjects\pywarsa\warsa\precipitation\satellite\rfe" />
+      <recent name="D:\sciebo\PythonProjects\pywarsa\warsa\precipitation\satellite\arc2" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.yearly">
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kagera" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Kagera" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="gap_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pydrology" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/timeseries/gap_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="gdalcheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Pydrology" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/gdalcheck.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="mswep" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warsa/data/hydroclim/sarp/time_series" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsa" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Projects\python_pycharm_workspace\pywarsa\warsa\data\hydroclim\sarp\mswep\mswep.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="precipitation_sahra" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pydrology" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/precipitation_sahra.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="pybasics1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Pydrology" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/pybasics1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="yearly" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../pywarsadev/warsadev/timeseries" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pywarsadev" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/yearly.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python.mswep" />
+      <item index="1" class="java.lang.String" itemvalue="Python.precipitation_sahra" />
+      <item index="2" class="java.lang.String" itemvalue="Python.gap_analysis" />
+      <item index="3" class="java.lang.String" itemvalue="Python.gdalcheck" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pybasics1" />
+      <item index="5" class="java.lang.String" itemvalue="Python.yearly" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.yearly" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pybasics1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.gdalcheck" />
+        <item index="3" class="java.lang.String" itemvalue="Python.gap_analysis" />
+        <item index="4" class="java.lang.String" itemvalue="Python.precipitation_sahra" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34f7f1da-1a3f-48e1-82a7-93c11e7cb92d" name="Default" comment="" />
+      <created>1439807911617</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1439807911617</updated>
+    </task>
+    <task id="LOCAL-00001" summary="work in progress">
+      <created>1439822044302</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1439822044302</updated>
+    </task>
+    <task id="LOCAL-00002" summary="join path">
+      <created>1439823088869</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1439823088869</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uncommented">
+      <created>1439823206699</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1439823206699</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lp_prj linux/windows">
+      <created>1439906300833</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1439906300833</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_monthly_TestMonthly - 2017.08.24 at 11h 21m 00s.xml">
+      <configuration name="Unittests for test_monthly.TestMonthly" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_monthly_py - 2017.08.24 at 11h 21m 12s.xml">
+      <configuration name="Unittests in test_monthly.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22390318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23962656" sideWeight="0.5052687" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48231512" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28617364" sideWeight="0.4947313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32484075" sideWeight="0.4928717" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33440515" sideWeight="0.4936803" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.102118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37070063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39974457" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967907" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24041452" sideWeight="0.5052687" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39974457" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35796177" sideWeight="0.4936803" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32484075" sideWeight="0.4928717" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30337077" sideWeight="0.4947313" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25948104" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967907" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48407644" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2192649" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37070063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/../pylimpopo" />
+      <path value="$PROJECT_DIR$/../warsaweb" />
+    </ignored-roots>
+    <MESSAGE value="work in progress" />
+    <MESSAGE value="join path" />
+    <MESSAGE value="uncommented" />
+    <MESSAGE value="lp_prj linux/windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="lp_prj linux/windows" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/satellite/trmm/trmm_download_3B42RT_v7_3h_nascom.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../Kagera/Kagera/srtm.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/satellite/trmm/trmm_rasterize_3B42RT_v7_3h_nascom.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pywarsasandbox/warsasb/sarp/old/analysis.py</url>
+          <line>488</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/satellite/sarp_time_series.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/gis/rasters/zonal.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/gis/rasters/clip.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../Pampanga/sarp_timeseries.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../Pampanga/sarp_timeseries.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/observed/dwd/cdc/observations_germany/climate/cdc_climate.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="399" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../dwd_cdc/dwd/cdc/observations_germany/climate/cdc_climate.py</url>
+          <line>347</line>
+          <option name="timeStamp" value="524" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pylimpopo/limpopo/mozambique/timeseries/hydrocst.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="644" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../saplimpopo/sapl/hydrocst/data.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="806" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyBeginningStatistics/chp02/chp02_01_06_sample_size_and_rel_freq_hist.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="807" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyBeginningStatistics/chp01/chp01_03_exercise03.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="840" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyBeginningStatistics/chp02/chp02_01_03_frequency_histogram.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="845" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyBeginningStatistics/chp02/chp02_03_01_dots.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="878" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../abandoned_land/raster/raster.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="882" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/satellite/satellite_precipitation_products.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="894" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/warsa/data/hydroclim/satellite/satellite_precipitation_products.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="895" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pyBeginningStatistics/chp03.py</url>
+          <line>400</line>
+          <option name="timeStamp" value="898" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pylimpopo/limpopo/south_africa/dwaf.py</url>
+          <line>177</line>
+          <option name="timeStamp" value="910" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../pylimpopo/limpopo/south_africa/dwaf.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="911" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../precipytation/precipitation/satellite/trmm/trmm_rasterize_3B42_v7_daily_nascom.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="945" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="950" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/chirps/chirps_20_global_daily_05.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/cmorph_gis_download.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/cmorph_download.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/download_v0x_8km_30min.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/gpm/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/arc2/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/rfe/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/chirps/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pywarsadev/warsadev/precipitation/satellite/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../precipytation/precipitation/satellite/rasterize_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pywarsadev/warsadev/precipitation/satellite/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/functions_parameters_examples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/timeseries/read_dataframe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/mubuku/rainfall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="45" column="15" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6256">
+          <caret line="374" column="0" lean-forward="false" selection-start-line="374" selection-start-column="0" selection-end-line="374" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/rasterize_v0x_025deg_3hly.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/time_series_v0x_8km_30min.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-946255732/__builtin__.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/drought/indices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda/Lib/site-packages/pandas/tools/merge.py" />
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/timeseries/time_examples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/precipitation_sahra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="37" column="65" lean-forward="true" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/timeseries/timeseries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="271" column="75" lean-forward="true" selection-start-line="271" selection-start-column="75" selection-end-line="271" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/timeseries/gap_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/arc2/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/chirps/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/rfe/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/gpm/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/cmorph_rasterize.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="225" column="14" lean-forward="false" selection-start-line="190" selection-start-column="2" selection-end-line="225" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/arc2/arc2_africa_bin.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/arc2/arc2_africa_tif.py" />
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/cmorph/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="62" lean-forward="false" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/download.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/satellite_precipitation_products.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/trmm_time_series_3B41RT_v7_3h_trmmopen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/trmm_time_series_3B42_v7_3h_nascom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/trmm_time_series_3B40RT_v7_3h_trmmopen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/trmm/trmm_time_series_3B42RT_v7_3h_nascom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/time_series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/precipitation/satellite/rasterize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="243" column="48" lean-forward="false" selection-start-line="243" selection-start-column="48" selection-end-line="243" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GIRS/girs/feat/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/gdalcheck.py" />
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/pybasics1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/pydrology/pybasics2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/timeseries/timestamp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pywarsadev/warsadev/timeseries/yearly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/timeseries/yearly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/timeseries/monthly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warsa/evapotranspiration/penman_monteith.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

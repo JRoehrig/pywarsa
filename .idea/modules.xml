@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../GIRS/.idea/GIRS.iml" filepath="$PROJECT_DIR$/../GIRS/.idea/GIRS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../InternshipHydrology/pydrology/.idea/Pydrology.iml" filepath="$PROJECT_DIR$/../../InternshipHydrology/pydrology/.idea/Pydrology.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SAPLimpopoKV/.idea/SAPLimpopoKV.iml" filepath="$PROJECT_DIR$/../SAPLimpopoKV/.idea/SAPLimpopoKV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../lorza/.idea/lorza.iml" filepath="$PROJECT_DIR$/../lorza/.idea/lorza.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../precipytation/.idea/precipytation.iml" filepath="$PROJECT_DIR$/../precipytation/.idea/precipytation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pywarsa.iml" filepath="$PROJECT_DIR$/.idea/pywarsa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pywarsadev/.idea/pywarsadev.iml" filepath="$PROJECT_DIR$/../pywarsadev/.idea/pywarsadev.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,9 +1,9 @@
 import os
 import datetime
-from warsa.precipitation.satellite.download import FTPDownload
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownloadFTP
 
 
-class CMorphFTP(FTPDownload):
+class CMorphFTP(SatelliteBasedPrecipitationDownloadFTP):
     """
     ftp://ftp.cpc.ncep.noaa.gov
     """
@@ -17,19 +17,22 @@ class CMorphFTP(FTPDownload):
         raise NotImplementedError
 
 
-class CMorphV0x8km30minFTP(CMorphFTP):
-    """
-        ftp://ftp.cpc.ncep.noaa.gov/precip/CMORPH_V0.x/RAW/8km-30min/2011/201108/
-        CMORPH_V0.x_RAW_8km-30min_2011080100.gz
-    """
-
-    def __init__(self, local_folder):
-        super(CMorphV0x8km30minFTP, self).__init__(local_folder, 'CMORPH_V0.x_RAW_8km-30min_', '.gz', [4, 6],
-                                                   '/precip/CMORPH_V0.x/RAW/8km-30min/')
-
-    @staticmethod
-    def get_datetime_from_file_name(filename):
-        return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d%H')
+# class CMorphV0x8km30minFTP(CMorphFTP):
+#     """
+#         ftp://ftp.cpc.ncep.noaa.gov/precip/CMORPH_V0.x/RAW/8km-30min/2011/201108/
+#         CMORPH_V0.x_RAW_8km-30min_2011080100.gz
+#     """
+#
+#     def __init__(self, local_folder):
+#         super(CMorphV0x8km30minFTP, self).__init__(local_folder, 'CMORPH_V0.x_RAW_8km-30min_', '.gz', [4, 6],
+#                                                    '/precip/CMORPH_V0.x/RAW/8km-30min/')
+#
+#     @staticmethod
+#     def get_datetime_from_file_name(filename):
+#         try:
+#             return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d%H')
+#         except ValueError:
+#             return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d%H%M')
 
 
 class CMorphV0x025deg3hlyFTP(CMorphFTP):
@@ -45,7 +48,12 @@ class CMorphV0x025deg3hlyFTP(CMorphFTP):
 
     @staticmethod
     def get_datetime_from_file_name(filename):
-        return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d')
+        try:
+            # As downloaded
+            return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d')
+        except ValueError:
+            # rasterized
+            return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d%H')
 
 
 class CMorphV0x025degDailyFTP(CMorphFTP):
@@ -76,7 +84,10 @@ class CMorphV1x8km30minFTP(CMorphFTP):
 
     @staticmethod
     def get_datetime_from_file_name(filename):
-        return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m')
+        try:
+            return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m')
+        except ValueError:
+            return datetime.datetime.strptime(os.path.splitext(filename)[0].split('_')[-1], '%Y%m%d%H%M')
 
 
 class CMorphV1x025deg3hlyFTP(CMorphFTP):

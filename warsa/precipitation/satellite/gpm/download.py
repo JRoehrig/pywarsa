@@ -1,9 +1,9 @@
 import os
 import datetime
-from warsa.precipitation.satellite.download import FTPDownload
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownloadFTP
 
 
-class GPMImergFTP(FTPDownload):
+class GPMImergFTP(SatelliteBasedPrecipitationDownloadFTP):
     def __init__(self, local_dir, prefix, suffix, dir_lens, ftp_host, ftp_dir, ftp_user, ftp_password,
                  ftp_timeout, product_subfolder):
         super(GPMImergFTP, self).__init__(local_dir, prefix, suffix, dir_lens, ftp_host, ftp_dir, ftp_user,
@@ -26,8 +26,8 @@ class GPMImergProductionHHFTP(GPMImergFTP):
 
     def __init__(self, local_dir, ftp_user, ftp_password):
         super(GPMImergProductionHHFTP, self).__init__(local_dir, '3B-HHR.', '.HDF5', [4, 2, 2],
-                                                    'arthurhou.pps.eosdis.nasa.gov', '/gpmdata', ftp_user, ftp_password,
-                                                    600, 'imerg')
+                                                      'arthurhou.pps.eosdis.nasa.gov', '/gpmdata',
+                                                      ftp_user, ftp_password, 600, 'imerg')
 
 
 class GPMImergProductionMOFTP(GPMImergFTP):

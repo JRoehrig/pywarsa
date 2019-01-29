@@ -18,26 +18,13 @@ class CMorphRasterize(Rasterizer):
         arr[arr < 0] = nodata
         arr[arr > 998] = nodata
         tran = [-180.0, x_res, 0, 60.0, 0, -y_res]
-        # srs = osr.SpatialReference()
-        # srs.ImportFromEPSG(4326)  # EPSG:4326
         srs = osr.SpatialReference()
-        srs.ImportFromEPSG(4035)  # Authalic WGS84 like in the arc2 tif version
+        # srs.ImportFromEPSG(4326)  # EPSG:4326
+        srs.ImportFromEPSG(4035)  # Authalic WGS84
         raster_parameters = RasterParameters(nx, ny, tran, srs.ExportToWkt(), 1, [nodata], gdal.GDT_Float32,
                                              driver_short_name='MEM')
-        raster_out = RasterWriter('mem', raster_parameters)
+        raster_out = RasterWriter(raster_parameters)
         raster_out.set_array(arr, 1)
-        # driver_code = raster_parameters.driverShortName
-        # driver = gdal.GetDriverByName(driver_code)
-        # dataset_out = driver.Create('mem', raster_parameters.RasterXSize, raster_parameters.RasterYSize,
-        #                             raster_parameters.number_of_bands, raster_parameters.data_types[0])
-        # dataset_out.SetGeoTransform(raster_parameters.geo_trans)
-        # dataset_out.SetProjection(raster_parameters.srs)
-        # for i in range(raster_parameters.number_of_bands):
-        #     if raster_parameters.nodata[i]:
-        #         rb_out = dataset_out.GetRasterBand(i+1)
-        #         rb_out.SetNoDataValue(raster_parameters.nodata[i])
-        # dataset_out.GetRasterBand(1).WriteArray(arr)
-        # dataset_out.FlushCache()
         return raster_out
 
     def get_raster_datasets_3hly(self, product_filename):
@@ -75,10 +62,8 @@ class CMorphRasterize(Rasterizer):
 
 class CMorphV0x8km30minRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV0x8km30minRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'),
-                                                         clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV0x8km30minRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'), **kwargs)
 
     def get_rasters(self, product_filename):
 
@@ -97,7 +82,7 @@ class CMorphV0x8km30minRasterize(CMorphRasterize):
 
         result = []
         if raster_filename0 or raster_filename1:
-            # rain depth. For rain intensity arr = arr / 0.5
+            # rain intensity in mm/h. For rain depth arr = arr * 0.5
             arr = np.frombuffer(self.read_compressed_file(product_filename), dtype='<f4')
             if raster_filename0:
                 result.append((raster_filename0, self.rasterize_block(arr[0:8159252], nx, ny, x_res, y_res)))
@@ -109,10 +94,8 @@ class CMorphV0x8km30minRasterize(CMorphRasterize):
 
 class CMorphV0x025deg3hlyRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV0x025deg3hlyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'),
-                                                           clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV0x025deg3hlyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'), **kwargs)
 
     def get_rasters(self, product_filename):
         return self.get_raster_datasets_3hly(product_filename)
@@ -120,10 +103,8 @@ class CMorphV0x025deg3hlyRasterize(CMorphRasterize):
 
 class CMorphV0x025degDailyRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV0x025degDailyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'),
-                                                            clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV0x025degDailyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'), **kwargs)
 
     def get_rasters(self, product_filename):
         return self.get_raster_datasets_daily(product_filename)
@@ -131,10 +112,8 @@ class CMorphV0x025degDailyRasterize(CMorphRasterize):
 
 class CMorphV1x8km30minRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV1x8km30minRasterize, self).__init__(product_dir, output_raster_dir, '.tar',
-                                                         clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV1x8km30minRasterize, self).__init__(product_dir, output_raster_dir, '.tar', **kwargs)
 
     def get_rasters(self, product_filename):
 
@@ -168,10 +147,8 @@ class CMorphV1x8km30minRasterize(CMorphRasterize):
 
 class CMorphV1x025deg3hlyRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV1x025deg3hlyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'),
-                                                           clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV1x025deg3hlyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'), **kwargs)
 
     def get_rasters(self, product_filename):
         return self.get_raster_datasets_3hly(product_filename)
@@ -179,10 +156,8 @@ class CMorphV1x025deg3hlyRasterize(CMorphRasterize):
 
 class CMorphV1x025degDailyRasterize(CMorphRasterize):
 
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(CMorphV1x025degDailyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'),
-                                                            clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(CMorphV1x025degDailyRasterize, self).__init__(product_dir, output_raster_dir, ('.gz', '.bz2'), **kwargs)
 
     def get_rasters(self, product_filename):
         return self.get_raster_datasets_daily(product_filename)

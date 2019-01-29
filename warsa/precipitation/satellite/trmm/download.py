@@ -1,9 +1,9 @@
 import os
 import datetime
-from warsa.precipitation.satellite.download import FTPDownload
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownloadFTP
 
 
-class TRMMopenFTP(FTPDownload):
+class TRMMopenFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://trmmopen.gsfc.nasa.gov
     """
@@ -15,7 +15,7 @@ class TRMMopenFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(filename)[0].split('.')[1], '%Y%m%d%H')
 
 
-class TRMMopen3B40RTv7x3hFTP(FTPDownload):
+class TRMMopen3B40RTv7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://trmmopen.gsfc.nasa.gov/pub/merged/combinedMicro/2000/03/
     Format:
@@ -31,7 +31,7 @@ class TRMMopen3B40RTv7x3hFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(filename)[0].split('.')[1], '%Y%m%d%H')
 
 
-class TRMMopen3B41RTv7x3hFTP(FTPDownload):
+class TRMMopen3B41RTv7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://trmmopen.gsfc.nasa.gov/pub/merged/calibratedIR/2000/03/
     Format:
@@ -46,7 +46,7 @@ class TRMMopen3B41RTv7x3hFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(filename)[0].split('.')[1], '%Y%m%d%H')
 
 
-class TRMMopen3B42RTv7x3hFTP(FTPDownload):
+class TRMMopen3B42RTv7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://trmmopen.gsfc.nasa.gov/pub/merged/mergeIRMicro/2000/03/
     Format:
@@ -61,7 +61,7 @@ class TRMMopen3B42RTv7x3hFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(filename)[0].split('.')[1], '%Y%m%d%H')
 
 
-class TRMMopen3B42RTv7x3hGISFTP(FTPDownload):
+class TRMMopen3B42RTv7x3hGISFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://trmmopen.gsfc.nasa.gov/pub/gis/200003/
     Format:
@@ -77,7 +77,7 @@ class TRMMopen3B42RTv7x3hGISFTP(FTPDownload):
         return datetime.datetime.strptime(''.join(os.path.splitext(filename)[0].split('.')[1]), '%Y%m%d%H')
 
 
-class TRMMopen3B42v7x3hFTP(FTPDownload):
+class TRMMopen3B42v7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://trmmopen.gsfc.nasa.gov/pub/TMPA/TRMMstandard/3B42/1998/01/01/
     Format:
@@ -92,7 +92,7 @@ class TRMMopen3B42v7x3hFTP(FTPDownload):
         return datetime.datetime.strptime(''.join(os.path.splitext(filename)[0].split('.')[1:3]), '%Y%m%d%H')
 
 
-class TRMMopen3B42v7x3hGISFTP(FTPDownload):
+class TRMMopen3B42v7x3hGISFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
          ftp://trmmopen.gsfc.nasa.gov/trmmdata/GIS/2014/01/01/
     Format:
@@ -111,7 +111,7 @@ class TRMMopen3B42v7x3hGISFTP(FTPDownload):
 # =============================================================================
 # TRMM Nascom
 # =============================================================================
-class TRMMnascom3B42RTv7x3hFTP(FTPDownload):
+class TRMMnascom3B42RTv7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://disc2.nascom.nasa.gov/data/opendap/TRMM_RT/TRMM_3B42RT.7/2000/060/
     Format:
@@ -129,7 +129,7 @@ class TRMMnascom3B42RTv7x3hFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(os.path.basename(filename))[0].split('.')[1], '%Y%m%d%H')
 
 
-class TRMMnascom3B42V7x3hFTP(FTPDownload):
+class TRMMnascom3B42V7x3hFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://disc2.nascom.nasa.gov/data/opendap/TRMM_L3/TRMM_3B42.7/1997/365/
     Format:
@@ -147,7 +147,7 @@ class TRMMnascom3B42V7x3hFTP(FTPDownload):
                                           '%Y%m%d%H')
 
 
-class TRMMnascom3B42V7xDailyFTP(FTPDownload):
+class TRMMnascom3B42V7xDailyFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source
         ftp://disc2.nascom.nasa.gov/data/opendap/TRMM_L3/TRMM_3B42_Daily.7/1998/01/
     Format:

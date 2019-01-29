@@ -1,9 +1,9 @@
 import os
 import datetime
-from warsa.precipitation.satellite.download import FTPDownload
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownloadFTP
 
 
-class RFE2AfricaBinFTP(FTPDownload):
+class RFE2AfricaBinFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/rfe2/bin
     Format:
@@ -19,7 +19,7 @@ class RFE2AfricaBinFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(filename)[0].split('.')[-1], '%Y%m%d')
 
 
-class RFE2AfricaTifFTP(FTPDownload):
+class RFE2AfricaTifFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/rfe2/geotiff/
     Format:
@@ -35,7 +35,7 @@ class RFE2AfricaTifFTP(FTPDownload):
         return datetime.datetime.strptime(os.path.splitext(os.path.basename(filename))[0].split('.')[1], '%Y%m%d')
 
 
-class RFE2AsiaBinFTP(FTPDownload):
+class RFE2AsiaBinFTP(SatelliteBasedPrecipitationDownloadFTP):
 
     def __init__(self, local_dir):
         super(RFE2AsiaBinFTP, self).__init__(local_dir, 'cpc_rfe_v2.0_sa_dly.bin.', '.gz', None,

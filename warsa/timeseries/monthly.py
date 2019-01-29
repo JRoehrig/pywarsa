@@ -57,7 +57,7 @@ def increment(dt, months=1, microseconds=0):
     # Don't use pd.Timedelta:
     # pd.Timestamp('2000-12-30 07:30') + pd.Timedelta(1, unit='M') == Timestamp('2001-01-29 17:59:06')
     dt = pd.Timestamp(dt)
-    ts1 = pd.Timestamp(pd.Timestamp(dt).to_datetime() + relativedelta(months=months, microseconds=microseconds))
+    ts1 = pd.Timestamp(pd.Timestamp(dt).to_pydatetime() + relativedelta(months=months, microseconds=microseconds))
     if is_last_day(dt):
         return ts1.replace(day=1) + pd.tseries.offsets.MonthEnd(n=1)
     else:
@@ -117,7 +117,7 @@ def series_starting_at(series, rule='sum', months=None, accum=1, start_at=None, 
     :param rule:
     :type rule: DataFrame, Series
     :param months: If months is None, all 12 months will be used.
-    :type months: list
+    :type months: list, NoneType
     :param accum: number of months to accumulate (default 1). It may be also negative.
     :type accum: int
     :param start_at: datetime, 'beg', or 'end'
@@ -135,40 +135,26 @@ def series_starting_at(series, rule='sum', months=None, accum=1, start_at=None, 
     """
     if not is_sorted:
         series = series.sort_index()
-    if accum > 0:
-        if label == 'right':
-            tdf = zip(*[[end, getattr(slice_by_timestamp(series, beg, end), rule)()]
-                        for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
-                                                  closed_left=closed_left, closed_right=closed_right)])
-        elif label == 'left':
-            tdf = zip(*[[beg, getattr(slice_by_timestamp(series, beg, end), rule)()]
-                        for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
-                                                  closed_left=closed_left, closed_right=closed_right)])
-    else:
-        if label == 'right':
-            tdf = zip(*[[end, getattr(slice_by_timestamp(series, beg, end), rule)()]
-                        for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
-                                                  closed_left=closed_left, closed_right=closed_right)])
-        elif label == 'left':
-            tdf = zip(*[[beg, getattr(slice_by_timestamp(series, beg, end), rule)()]
-                        for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
-                                                  closed_left=closed_left, closed_right=closed_right)])
+    index0 = series.index[0]
+    index1 = series.index[-1]
     if label == 'right':
-        pass
+        index1 += pd.DateOffset(days=1)
+        tdf = zip(*[[end, getattr(slice_by_timestamp(series, beg, end), rule)()]
+                    for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
+                                              closed_left=closed_left, closed_right=closed_right)
+                    if beg >= index0 and end <= index1])
     elif label == 'left':
-        pass
-
+        tdf = zip(*[[beg, getattr(slice_by_timestamp(series, beg, end), rule)()]
+                    for beg, end in intervals(series.index, months=months, accum=accum, start_at=start_at,
+                                              closed_left=closed_left, closed_right=closed_right)
+                    if beg >= index0 and end <= index1])
+    else:
+        assert False
     try:
-        return pd.concat(tdf[1][:], axis=1).transpose().set_index(pd.DatetimeIndex(tdf[0]))
+        df = pd.concat(tdf[1][:], axis=1).transpose().set_index(pd.DatetimeIndex(tdf[0]))
+        return df
     except TypeError:
         return pd.Series(tdf[1], index=tdf[0])
-
-    # indices = list()
-    # values = list()
-    # for interval in intervals(series.index, months=months, accum=accum, start_at=start_at, closed=closed):
-    #     indices.append(interval[0])
-    #     values.append(slice_by_datetime(series, interval[0], interval[1]).sum())
-    # return pd.Series(values, index=indices)
 
 
 # def monthly(series, rule='sum', months=None, accum=1, closed='left', label='right'):

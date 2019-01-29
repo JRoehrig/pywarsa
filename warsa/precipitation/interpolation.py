@@ -18,8 +18,8 @@ def idw_time_series_interpolation(point_lrs_in, field_name_in, df_ts_in, point_l
         point_lrs_out = Layers(point_lrs_out)
     except TypeError:
         pass
-    feat_in = sorted([list(ogr.CreateGeometryFromWkb(f[0]).GetPoints()[0]) + [str(f[1])] for f in point_lrs_in.get_geometry_and_field_values([field_name_in])], key=lambda v: v[2])
-    feat_out = sorted([list(ogr.CreateGeometryFromWkb(f[0]).GetPoints()[0]) + [str(f[1])] for f in point_lrs_out.get_geometry_and_field_values([field_name_out])], key=lambda v: v[2])
+    feat_in = sorted([list(ogr.CreateGeometryFromWkb(f[0]).GetPoints()[0]) + [str(f[1])] for f in point_lrs_in.get_geometries_and_field_values([field_name_in])], key=lambda v: v[2])
+    feat_out = sorted([list(ogr.CreateGeometryFromWkb(f[0]).GetPoints()[0]) + [str(f[1])] for f in point_lrs_out.get_geometries_and_field_values([field_name_out])], key=lambda v: v[2])
 
     # Read time series
     df_ts_in.columns = [str(c) for c in df_ts_in.columns]

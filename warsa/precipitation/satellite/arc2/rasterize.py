@@ -8,10 +8,8 @@ from girs.rast.parameter import RasterParameters
 
 class ARC2RFE2BinRasterize(Rasterizer):
 
-    def __init__(self, product_dir, nx, ny, x0, y0, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(ARC2RFE2BinRasterize, self).__init__(product_dir, output_raster_dir, '.gz', clip_layer,
-                                                   resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, nx, ny, x0, y0, output_raster_dir, **kwargs):
+        super(ARC2RFE2BinRasterize, self).__init__(product_dir, output_raster_dir, '.gz', **kwargs)
         self.nx = nx
         self.ny = ny
         self.x0 = x0
@@ -60,16 +58,12 @@ class ARC2RFE2BinRasterize(Rasterizer):
 
 
 class ARC2AfricaBinRasterize(ARC2RFE2BinRasterize):
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(ARC2AfricaBinRasterize, self).__init__(product_dir, 751, 801, -20.05, 40.05, output_raster_dir, clip_layer,
-                                                     resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(ARC2AfricaBinRasterize, self).__init__(product_dir, 751, 801, -20.05, 40.05, output_raster_dir, **kwargs)
 
 
 class ARC2AfricaTifRasterize(Rasterizer):
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(ARC2AfricaTifRasterize, self).__init__(product_dir, output_raster_dir, '.tif.zip', clip_layer,
-                                                     resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(ARC2AfricaTifRasterize, self).__init__(product_dir, output_raster_dir, '.tif.zip', **kwargs)
 
 

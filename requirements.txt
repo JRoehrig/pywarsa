@@ -1,4 +1,3 @@
-nose
 numpy
 pandas
 netCDF4
@@ -6,6 +5,7 @@ gdal
 osr
 scipy
 matplotlib
-Image
 Cython
-shapely
+cryptography
+bs4
+girs

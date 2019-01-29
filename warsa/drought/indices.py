@@ -8,10 +8,39 @@ from warsa.timeseries.timeseries import get_n_monthly_data
 from warsa.timeseries.monthly import split_monthly_data_annually
 
 
+# =============================================================================
+# SPEI
+# =============================================================================
 def spi(precipitation):
     """
     :param precipitation: precipitation values
-    :type precipitation: list of np.array
+    :type precipitation: list or np.array
+    :return: list of spi
+    :rtype: list
+    """
+    try:
+        precipitation = np.array(precipitation)
+    except AttributeError:
+        pass
+    if precipitation is None:
+        return np.array([])
+    result = np.full(len(precipitation), np.nan)
+    if len(precipitation) < 2:
+        return result
+    precipitation_gtz = precipitation[precipitation > 0.0]
+    lambda1, lambda2 = moments.lmoments(precipitation_gtz, 2)
+    alpha, beta = moments.lmoments_parameter_estimation_gamma(lambda1, lambda2)
+    f = float(len(precipitation_gtz)) / len([np.isnan(p) for p in precipitation])
+    for i, p in enumerate(precipitation):
+        if not np.isnan(p):
+            result[i] = norm.ppf((1 - f) + f * gamma.cdf(p, alpha, scale=beta))
+    return result
+
+
+def spi_old(precipitation):
+    """
+    :param precipitation: precipitation values
+    :type precipitation: list or np.array
     :return: list of spi
     :rtype: list
     """
@@ -53,8 +82,8 @@ def spi(precipitation):
     for p in precipitation:
         if p is not None:
             gammap = gamma.cdf(p, alpha, scale=beta)
-            q = (1 - float(num_gtz) / num_val)
-            h = q + (1 - q) * gammap
+            q = (1.0 - float(num_gtz) / num_val)
+            h = q + (1.0 - q) * gammap
             if h <= 0.5:
                 t = math.sqrt(math.log(1.0 / (h ** 2)))
                 v = -(t - (c0 + c1 * t + c2 * t ** 2) / (1 + d1 * t + d2 * t ** 2 + d3 * t ** 3))
@@ -93,16 +122,24 @@ def spi_monthly(sr, months=range(1, 13), n=1, prefix='Prec', min_years=20):
     return df
 
 
+# =============================================================================
+# SPEI
+# =============================================================================
 def spei(values):
-    """Calculate SPEI from given values
+    """Calculate SPEI from given values.
+
+    Values are the differences between precipitation and potential evapotranspiration.
+
+    For example if you want to calculate spei from January in the
+
 
     :param values: list or numpy array of values
-    :type values:
+    :type values: list, numpy array
     :return:
     :rtype:
     """
     lambda1, lambda2, tau3 = moments.lmoments(values, 3)
-    mu, sigma, kappa = moments.lm2glo(lambda1, lambda2, tau3)
+    mu, sigma, kappa = moments.lmoments_parameter_estimation_generalized_logistic(lambda1, lambda2, tau3)
     return norm.ppf(glo.cdf(values, kappa, mu, sigma))
 
 

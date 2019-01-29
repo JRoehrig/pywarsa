@@ -1,14 +1,11 @@
-__author__ = 'roehrig'
-
 import os
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownload
 
-from warsa.precipitation import SARP, make_dir
 
-
-class GFSDownload(SARP):
+class GFSDownload(SatelliteBasedPrecipitationDownload):
     # ftp://ftp.cpc.ncep.noaa.gov/precip/CMORPH_V0.ir/RAW/8km-30min/2011/201108/CMORPH_V0.x_RAW_8km-30min_2011080100.gz
     def __init__(self):
-        SARP.__init__(self)
+        SatelliteBasedPrecipitationDownload.__init__(self)
         self.ftp_host = 'nomads.ncdc.noaa.gov'
         self.dir_lens = [4,6]
 
@@ -37,7 +34,7 @@ class GFSGRID4Download(GFSDownload):
 
 
 def download(target_dir):
-    make_dir(target_dir)
+    # make_dir(target_dir)
     trmm = GFSGRID4Download()
     trmm.verbose = True
     trmm.local_dir = target_dir

@@ -10,9 +10,7 @@ class RFE2AfricaTifRasterize(ARC2AfricaTifRasterize):
 
 
 class RFE2AsiaBinRasterize(ARC2RFE2BinRasterize):
-    def __init__(self, product_dir, output_raster_dir, clip_layer=None, resample_sizes=None,
-                 overwrite=False, verbose=False):
-        super(RFE2AsiaBinRasterize, self).__init__(401, 301, 70.05, 35.05, product_dir, output_raster_dir,
-                                                   clip_layer, resample_sizes, overwrite, verbose)
+    def __init__(self, product_dir, output_raster_dir, **kwargs):
+        super(RFE2AsiaBinRasterize, self).__init__(401, 301, 70.05, 35.05, product_dir, output_raster_dir, **kwargs)
 
 

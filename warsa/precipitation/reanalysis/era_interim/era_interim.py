@@ -68,37 +68,3 @@ def create_time_series(nc, indices, variables):
     return df
 
 
-def test():
-    nc = 'E:/Projects/RS/ECMWF/ERA-Interim/_grib2netcdf-atls17-95e2cf679cd58ee9b4db4dd119a05a8d-Ahj8Z1.nc'
-    shp = 'E:/Projects/RS/ECMWF/ERA-Interim/_grib2netcdf-atls17-95e2cf679cd58ee9b4db4dd119a05a8d-Ahj8Z1.shp'
-    csv = 'E:/Projects/RS/ECMWF/ERA-Interim/_grib2netcdf-atls17-95e2cf679cd58ee9b4db4dd119a05a8d-Ahj8Z1.csv'
-
-    ds = Dataset(nc, 'r')
-    print ds.variables
-
-    bbox = [5.25, 49.5, 9.75, 52.5]
-    lonlat, lonlat_idx = get_lon_lat(nc, bbox)
-    # create_shapefile(lonlat, lonlat_idx, shp)
-
-    df = create_time_series(nc, lonlat_idx, [u'tp'])
-    df.to_csv(csv, sep=';')
-    # ds = Dataset(fn, 'r')
-    # print ds.variables
-    # latlon = [(lon, lat) for lat in np.squeeze(ds.variables[u'latitude']) for lon in np.squeeze(ds.variables[u'longitude'])]
-
-    # type = ds.variables['time']
-    # df = pd.DataFrame(index=num2date(type[:], type.units))
-    # print df
-    # df_list = [pd.DataFrame(index=num2date(type[:], type.units)) for c in latlon]
-    # for var in [u'tas', u'vas', u'huss', u'ps', u'uas', u'pr', u'rsds', u'rlds']:
-    #     v = np.reshape(np.squeeze(ds.variables[var]), (7305, n))
-    #     for i in range(n):
-    #         df_list[i][var] = v[:, i]
-    # for i, df in enumerate(df_list):
-    #     ll = '_{0:.3f}'.format(latlon[i][0]) + '_{0:.3f}'.format(latlon[i][1])
-    #     df.to_csv(os.path.splitext(fn)[0] + ll + '.csv', sep=';')
-    # return df_list
-
-
-
-test()

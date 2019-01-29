@@ -25,6 +25,11 @@ def is_leap_day(dt):
     return calendar.isleap(dt.year) and dt.day == 29 and dt.month == 2
 
 
+def drop_date_duplicates(df):
+    index = df.index.name
+    return df.reset_index().drop_duplicates(subset=index, inplace=False).set_index(index)
+
+
 def replace_year(dt, year):
     dt = pd.Timestamp(dt)
     try:
@@ -34,13 +39,14 @@ def replace_year(dt, year):
 
 
 def read_time_series(filename, columns=None, beg_datetime=pd.Timestamp.min, end_datetime=pd.Timestamp.max, worksheet_name=None):
-    if filename.endswith('.csv'):
+    if filename.endswith(('.csv', '.gz', '.bz2', '.zip', '.xz')):
         return read_csv(filename, columns, beg_datetime, end_datetime)
     elif filename.endswith('.xls'):
         return read_xls(filename, columns, beg_datetime, end_datetime, worksheet_name)
     elif filename.endswith('.xlsx'):
         return read_xlsx(filename, columns, beg_datetime, end_datetime, worksheet_name)
-    raise Exception('File type unknown: {}'.format(filename))
+    else:
+        raise Exception('File type unknown: {}'.format(filename))
 
 
 def _read_time_series(df, columns=None, beg_datetime=pd.Timestamp.min, end_datetime=pd.Timestamp.max):
@@ -124,7 +130,7 @@ def read_xls(excel_filename, columns=None, beg_datetime=pd.Timestamp.min, end_da
     return _read_time_series(df, columns, beg_datetime, end_datetime)
 
 
-def write_time_series(df, filename, start_row=0, separated=False, column=None):
+def write_time_series(df, filename, start_row=0, separated=False, column=None, float_format='%.2f'):
     """
     Write the time series in df into the filename. Filename can be in
         the formats csv, xls, or xlsx.
@@ -140,10 +146,12 @@ def write_time_series(df, filename, start_row=0, separated=False, column=None):
     column applies only when separated is False and the filename has a suffix
         .xls or .xlsx
     """
+    if isinstance(df, pd.Series):
+        df = df.to_frame()
     if filename.endswith('.csv'):
         if not os.path.isdir(os.path.dirname(filename)):
             os.makedirs(os.path.dirname(filename))
-        to_csv(df, filename, start_row, separated)
+        to_csv(df, filename, start_row, separated, float_format=float_format)
     elif filename.endswith('.xls') or filename.endswith('.xlsx'):
         if not os.path.isdir(os.path.dirname(filename)):
             os.makedirs(os.path.dirname(filename))
@@ -152,7 +160,7 @@ def write_time_series(df, filename, start_row=0, separated=False, column=None):
         raise Exception('write_time_series(): unknown file format {}'.format(filename))
 
 
-def to_csv(df, filename, start_row=None, separated=True):
+def to_csv(df, filename, start_row=None, separated=True, float_format='%.2f'):
     d = os.path.dirname(filename)
     if not os.path.isdir(d):
         os.makedirs(d)
@@ -164,7 +172,8 @@ def to_csv(df, filename, start_row=None, separated=True):
             df0 = df[col]
             df0 = pd.DataFrame(df0, columns=[col])
             path_or_buf = prefix + str(col) + '.csv'
-            df0.to_csv(path_or_buf=path_or_buf, sep=';', index_label='Date', date_format='%Y-%m-%d %H:%M', float_format='%0.2f')
+            df0.to_csv(path_or_buf=path_or_buf, sep=';', index_label='Date', date_format='%Y-%m-%d %H:%M',
+                       float_format=float_format)
     else:
         df.to_csv(path_or_buf=filename, sep=';', index_label='Date', date_format='%Y-%m-%d %H:%M', float_format='%0.2f')
 
@@ -189,9 +198,64 @@ def to_excel(df, filename, start_row=None, separated=True, column=None):
     writer.save()
 
 
-# =============================================================================
-# Slicing
-# =============================================================================
+def get_n_monthly_data(sr, months=range(1, 13), n=1, how='sum'):
+    """
+    :param sr: Series
+    :param months: list of months, e.g. [11, 12, 1, 2, 3]
+    :param n: number of months to aggregate: 1, 2, 3, 4, or 6. Default: n=1
+    :return: pandas.DataFrame with n-monthly values 'M' for each year
+    """
+    assert n in [1, 2, 3, 4, 6]
+    sr = slice_to_full_years(sr, beg_month=(months[0]-n) % 12 + 1)
+    sr = sr.resample('M', how='sum')
+    if n > 1:
+        sr = sr.resample(str(n) + 'M', how=how, closed='left', loffset='-1M')
+        sr.index = [t + relativedelta(months=+(n-1)) for t in sr.index]
+    return sr
+
+
+def get_year_begin_and_end_timestamp(beg_timestamp, end_timestamp, year=None):
+    beg_timestamp = pd.Timestamp(beg_timestamp)
+    if not end_timestamp:
+        end_timestamp = to_open_interval(replace_year(beg_timestamp, beg_timestamp.year + 1))
+    else:
+        end_timestamp = pd.Timestamp(end_timestamp)
+    if not year:
+        year = beg_timestamp.year
+    beg_dt = replace_year(beg_timestamp, year)
+    end_dt = replace_year(end_timestamp, year)
+    if beg_dt >= end_dt:
+        end_dt = replace_year(end_timestamp, year + 1)
+    return beg_dt, end_dt
+
+
+def shift(df, frequency, minutes):
+    """
+    :param df: data frame or series
+    :param frequency: frequency of df.index as string, e.g., '30min', '1H', '3H', or '1D'
+    :param minutes: minutes to shift, negative values for west time zones
+    :return: data frame or series
+    """
+    df_index = df.index
+    df = df.reindex(pd.date_range(df_index.min(), df_index.max(), freq=frequency))
+    return df.shift(freq='{}T'.format(minutes))
+
+
+def slice_init(df):
+    """Remove rows until a first row with data is found
+
+    Returns df[df.first_valid_index():]
+
+    :param df:
+    :return:
+    """
+    try:
+        return df[df.first_valid_index():]
+    except IndexError:
+        # empty data frame
+        return None
+
+
 def slice_by_timestamp(df, beg_timestamp=pd.Timestamp.min, end_timestamp=pd.Timestamp.max):
     """Slice the data frame from index starting at beg_timestamp to end_timestamp, including the latter
     :param df:
@@ -199,7 +263,7 @@ def slice_by_timestamp(df, beg_timestamp=pd.Timestamp.min, end_timestamp=pd.Time
     :param end_timestamp: datetime.datetime, pandas.timestamp, or numpy.datetime64
     :return: data frame
     """
-    return df.ix[df.index.searchsorted(beg_timestamp):df.index.searchsorted(end_timestamp)-1]
+    return df.ix[df.index.searchsorted(beg_timestamp):df.index.searchsorted(end_timestamp)]
 
 
 def slice_to_full_years(df, beg_timestamp=None):
@@ -222,23 +286,6 @@ def slice_to_full_years(df, beg_timestamp=None):
         end_ts = replace_year(beg_timestamp, ts1.year - 1)
     # Exclude end_ts
     return df.ix[df.index.searchsorted(beg_ts):df.index.searchsorted(end_ts)]
-
-
-
-def get_n_monthly_data(sr, months=range(1, 13), n=1, how='sum'):
-    """
-    :param sr: Series
-    :param months: list of months, e.g. [11, 12, 1, 2, 3]
-    :param n: number of months to aggregate: 1, 2, 3, 4, or 6. Default: n=1
-    :return: pandas.DataFrame with n-monthly values 'M' for each year
-    """
-    assert n in [1, 2, 3, 4, 6]
-    sr = slice_to_full_years(sr, beg_month=(months[0]-n) % 12 + 1)
-    sr = sr.resample('M', how='sum')
-    if n > 1:
-        sr = sr.resample(str(n) + 'M', how=how, closed='left', loffset='-1M')
-        sr.index = [t + relativedelta(months=+(n-1)) for t in sr.index]
-    return sr
 
 
 # def split_monthly_data_annualy(sr, months=range(1, 13), n=1, prefix='M'):
@@ -303,21 +350,6 @@ def split_annually(df, beg_datetime=None, end_datetime=None):
         end_dt += relativedelta(years=1)
 
     return df_dict
-
-
-def get_year_begin_and_end_timestamp(beg_timestamp, end_timestamp, year=None):
-    beg_timestamp = pd.Timestamp(beg_timestamp)
-    if not end_timestamp:
-        end_timestamp = to_open_interval(replace_year(beg_timestamp, beg_timestamp.year + 1))
-    else:
-        end_timestamp = pd.Timestamp(end_timestamp)
-    if not year:
-        year = beg_timestamp.year
-    beg_dt = replace_year(beg_timestamp, year)
-    end_dt = replace_year(end_timestamp, year)
-    if beg_dt >= end_dt:
-        end_dt = replace_year(end_timestamp, year + 1)
-    return beg_dt, end_dt
 
 
 # =============================================================================
@@ -385,13 +417,30 @@ def create_annual_statistics(df, beg_datetime, end_datetime, frequency='D', stat
     return dfg, dfs, dfn, dfz, dfp
 
 
-def create_annual_precipitation_statistics(filenames_in, filename_out, beg_datetime, end_datetime, frequency='D', precipitation_column_name=None):
-    def _precipitation_column_name(filename):
-        fn = os.path.splitext(os.path.basename(filename))[0]
-        return 'P' + fn.split('_')[0]
-    if precipitation_column_name is None:
-        precipitation_column_name = _precipitation_column_name
+def create_annual_precipitation_statistics(filenames_in, column_name_in, filename_out, beg_datetime, end_datetime,
+                                           frequency='D', column_name_out=None):
+    """
 
+    :param filenames_in: list of filenames of time series. The first columns is assumed to be the datetime or date and
+           will be used as index
+    :param column_name_in: name of the column in the time series with precipitation values
+    :param filename_out: name of the output file
+    :param beg_datetime:
+    :param end_datetime:
+    :param frequency:
+    :param column_name_out: function to extract the column name from the filename. if None, all digits in the time
+           series will be used as column name preceded by 'P'
+    :return:
+    """
+    def _column_name_out(filename1):
+        fn = os.path.basename(filename1)
+        fn = [f for f in fn if f.isdigit()]
+        return 'P{}'.format(''.join(fn))
+    if column_name_out is None:
+        column_name_out = _column_name_out
+    column_names = [column_name_out(f) for f in filenames_in]
+    if len(set(column_names)) != len(filenames_in):
+        column_names = [os.path.splitext(os.path.basename(f)) for f in filenames_in]
     beg_dt, end_dt = get_year_begin_and_end_timestamp(beg_datetime, end_datetime)
     dt = end_dt-beg_dt
     if frequency == 'D':
@@ -407,15 +456,15 @@ def create_annual_precipitation_statistics(filenames_in, filename_out, beg_datet
     dfp_list = []
     n = len(filenames_in)
     for i, filename in enumerate(filenames_in):
-        if i % 10 == 0:
-            print '{}: {} of {}'.format(filename, i, n)
+        print 'Statistics {} of {}: {}'.format(i + 1, n, os.path.basename(filename))
         df = read_time_series(filename)
+        df = df[column_name_in].to_frame()
+        df.columns = [column_names[i]]
         dfg, dfs, dfn, dfz, dfp = create_annual_statistics(df, beg_datetime, end_datetime, frequency, stat=np.sum,
                                                            gaps=True, isnull=True, zeros=True, greaterthenzero=True)
         if dfg is not None:
             dfg_list.append(dfg)
         if dfs is not None:
-            dfs.columns = [precipitation_column_name(filename).decode('latin-1').encode('utf-8')]
             dfs_list.append(dfs)
         if dfn is not None:
             dfn_list.append(dfn)
@@ -440,7 +489,6 @@ def create_annual_precipitation_statistics(filenames_in, filename_out, beg_datet
     dfp = pd.concat(dfp_list, axis=1) if dfp_list else None
 
     writer = ExcelWriter(filename_out, engine='xlsxwriter')
-
     def write_excel(wrt, dfw, name, min_value, max_value, invert=False):
         if dfw is None:
             return
@@ -455,14 +503,6 @@ def create_annual_precipitation_statistics(filenames_in, filename_out, beg_datet
     write_excel(writer, dfz, 'Zeros', 0, max_value, invert=False)
     write_excel(writer, dfp, 'Greater than zero', 0, max_value, invert=False)
     writer.save()
-
-
-# =============================================================================
-# Others
-# =============================================================================
-def drop_date_duplicates(df):
-    index = df.index.name
-    return df.reset_index().drop_duplicates(subset=index, inplace=False).set_index(index)
 
 
 # def round(df, decimals):

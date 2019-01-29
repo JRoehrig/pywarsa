@@ -1,6 +1,7 @@
+import datetime
 import calendar
 import pandas as pd
-from timeseries import is_leap_day
+from timeseries import is_leap_day, split_annually
 from dateutil.relativedelta import relativedelta
 
 
@@ -46,3 +47,13 @@ def increment(dt, years=1, microseconds=0):
     dt = pd.Timestamp(dt)
     return pd.Timestamp(pd.Timestamp(dt).to_pydatetime() + relativedelta(years=years, microseconds=microseconds))
 
+
+def get_max_min_mean(df, beg_datetime, end_datetime):
+    df_dict = split_annually(df, beg_datetime, end_datetime)
+    result_list = list()
+    for k in sorted(df_dict.keys()):
+        df_annual = df_dict[k]
+        result_list.append([k[1].year, float(df_annual.min()), float(df_annual.max()), float(df_annual.mean())])
+    result_list = map(list, zip(*result_list))
+    return pd.DataFrame({'min': result_list[1], 'max': result_list[2], 'mean': result_list[3]},
+                        index=result_list[0], columns=['min', 'max', 'mean'])

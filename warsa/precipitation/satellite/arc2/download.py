@@ -1,9 +1,9 @@
 import os
 import datetime
-from warsa.precipitation.satellite.download import FTPDownload
+from warsa.precipitation.satellite.download import SatelliteBasedPrecipitationDownloadFTP
 
 
-class ARC2AfricaBinFTP(FTPDownload):
+class ARC2AfricaBinFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/arc2/bin/
     Format:
@@ -18,7 +18,7 @@ class ARC2AfricaBinFTP(FTPDownload):
         return datetime.datetime.strptime(filename.split('.')[-2], '%Y%m%d')
 
 
-class ARC2AfricaTifFTP(FTPDownload):
+class ARC2AfricaTifFTP(SatelliteBasedPrecipitationDownloadFTP):
     """Source:
         ftp://ftp.cpc.ncep.noaa.gov//fews/fewsdata/africa/arc2/geotiff/
     Format:
